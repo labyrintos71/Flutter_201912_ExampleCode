@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Button/buttonexam.dart';
+import 'Textview/textdecoration.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -58,37 +61,30 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
-            Text(
-              'Hello world',
-              style: TextStyle(fontSize: 40,
-                decoration: TextDecoration.underline,
-              ),
+            RaisedButton(
+              child: Text('TextExam', style: TextStyle(fontSize: 21)),
+              color: Colors.blue,
+              onPressed: () {
+                // push에 전달되는 두 번째 매개변수는 Route<T> 클래스.
+                Navigator.push(context,
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                  return TextSample();
+                }));
+              },
             ),
-            Text.rich(
-              TextSpan(
-                text: 'Hello ',
-                style: TextStyle(fontSize: 40),
-                children: <TextSpan>[
-                  TextSpan(
-                      text: 'world',
-                      style: TextStyle(
-                        fontSize: 40,
-                        decoration: TextDecoration.underline,
-                      )),
-                  // can add more TextSpans here...
-                ],
-              ),
-            ),
-            Text(
-              'Hello world',
-              style: TextStyle(
-                fontSize: 40,
-                decoration: TextDecoration.underline,
-                decorationStyle: TextDecorationStyle.dashed,
-                //TextDecorationStyle.dotted: 점선
-                //TextDecorationStyle.double: 밑줄
-                //TextDecorationStyle.wavy:   물결
-              ),
+            RaisedButton(
+              child: Text('ButtonExam', style: TextStyle(fontSize: 21)),
+              color: Colors.blue,
+              onPressed: () {
+                // 화살표 문법 적용
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ButtonSample()));
+
+                // 위와 같은 코드. of 메소드 호출이 불편하다.
+                // Navigator.of(context).push(
+                // MaterialPageRoute<void>(builder: (BuildContext context) => Second())
+                // );
+              },
             ),
           ],
         ),
