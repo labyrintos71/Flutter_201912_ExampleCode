@@ -1,8 +1,3 @@
-///
-/// Created by NieBin on 2019/1/14
-/// Github: https://github.com/nb312
-/// Email: niebin312@gmail.com
-///
 import "package:flutter/material.dart";
 import 'package:examplecode/const/_const.dart';
 
@@ -14,7 +9,6 @@ class TextPage extends StatefulWidget {
 class _TextState extends State<TextPage> {
   @override
   Widget build(BuildContext context) {
-    var content;
     return Scaffold(
       appBar: AppBar(
         title: Text("Text"),

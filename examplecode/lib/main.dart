@@ -1,3 +1,5 @@
+import 'package:examplecode/page/assets/AssetsPage.dart';
+import 'package:examplecode/page/main_page.dart';
 ///Create by Flutter open
 import 'package:flutter/material.dart';
 import 'package:examplecode/page/_page.dart';
@@ -11,12 +13,14 @@ class ExamplApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: FLUTTER_OPEN,
-      theme: ThemeData(
-        primaryColor: BLUE_DEEP,
-        accentColor: RED,
-      ),
-      home: HomePage(),
+      home: HomeScreen(),
+      theme: ThemeData.dark(),
       routes: {
+        "/alertdialog": (context) => AssetsPage(),
+        "/anim": (context) => AnimationPage(),
+        "/appbar": (context) => AppBarPage(),
+        "/assets": (context) => AssetsPage(),
+        
         PageName.CONTAINER: (context) => ContainerPage(),
         PageName.TEXT: (context) => TextPage(),
         PageName.IMAGE: (context) => ImagePage(),
@@ -52,7 +56,6 @@ class ExamplApp extends StatelessWidget {
         PageName.FLOW: (context) => FlowPage(),
         PageName.LAYOUT: (context) => LayoutPage(),
         PageName.METHOD_CHANNEL: (context) => MethodChannelPage(),
-        PageName.ASSET_PAGE: (context) => AssetsPage(),
         PageName.ANIMATION: (context) => AnimationPage(),
         PageName.ANIM_CONTAINER: (context) => AnimatedContainerPage(),
         PageName.ANIM_CROSS_FADE: (context) => AnimCrossFadePage(),

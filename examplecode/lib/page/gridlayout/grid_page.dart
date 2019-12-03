@@ -1,18 +1,13 @@
-///
-/// Created by NieBin on 2019/1/13
-/// Github: https://github.com/nb312
-/// Email: niebin312@gmail.com
-///
 import "package:flutter/material.dart";
 import 'package:examplecode/const/_const.dart';
 import 'package:examplecode/util/_util.dart';
 
-class HomePage extends StatefulWidget {
+class GridScreen extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _GridPage createState() => _GridPage();
 }
 
-class _HomeState extends State<HomePage> {
+class _GridPage extends State<GridScreen> {
   var opacity = 0.8;
 
   LinearGradient _itemGradient(index) {
