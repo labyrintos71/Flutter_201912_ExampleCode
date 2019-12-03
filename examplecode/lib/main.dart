@@ -1,100 +1,81 @@
+///Create by Flutter open
 import 'package:flutter/material.dart';
+import 'package:examplecode/page/_page.dart';
+import 'package:examplecode/const/_const.dart';
 
-import 'Button/buttonexam.dart';
-import 'Provider/providerexam.dart';
-import 'Textview/textdecoration.dart';
+void main() => runApp(ExamplApp());
 
-void main() => runApp(CounterApp());
-
-class MyApp extends StatelessWidget {
+class ExamplApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: FLUTTER_OPEN,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: BLUE_DEEP,
+        accentColor: RED,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-            RaisedButton(
-              child: Text('TextExam', style: TextStyle(fontSize: 21)),
-              color: Colors.blue,
-              onPressed: () {
-                // push에 전달되는 두 번째 매개변수는 Route<T> 클래스.
-                Navigator.push(context,
-                    MaterialPageRoute<void>(builder: (BuildContext context) {
-                  return TextSample();
-                }));
-              },
-            ),
-            RaisedButton(
-              child: Text('ButtonExam', style: TextStyle(fontSize: 21)),
-              color: Colors.blue,
-              onPressed: () {
-                // 화살표 문법 적용
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ButtonSample()));
-
-                // 위와 같은 코드. of 메소드 호출이 불편하다.
-                // Navigator.of(context).push(
-                // MaterialPageRoute<void>(builder: (BuildContext context) => Second())
-                // );
-              },
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      home: HomePage(),
+      routes: {
+        PageName.CONTAINER: (context) => ContainerPage(),
+        PageName.TEXT: (context) => TextPage(),
+        PageName.IMAGE: (context) => ImagePage(),
+        PageName.ROW_COLUMN: (context) => RowColumnPage(),
+        PageName.ICON: (context) => IconPage(),
+        PageName.RAISE_BUTTON: (context) => RaiseButtonPage(),
+        PageName.APP_BAR: (context) => AppBarPage(),
+        PageName.SCAFFOLD: (context) => ScaffoldPage(),
+        PageName.FLUTTER_LOGO: (context) => FlutterLogoPage(),
+        PageName.PLACE_HOLDER: (context) => PlaceHolderPage(),
+        PageName.BOTTOM_NAV_BAR: (context) => BottomNavBarPage(),
+        PageName.TAB_VIEW: (context) => TabBarViewPage(),
+        PageName.FLOATING_ACTION_BUTTON: (context) => FloatingActionButtonPage(),
+        PageName.DROP_DOWN_BUTTON: (context) => DropDownButtonPage(),
+        PageName.POPUP_MENU_BUTTON: (context) => PopupMenuButtonPage(),
+        PageName.STACK: (context) => StackPage(),
+        PageName.STEPPER: (context) => StepperPage(),
+        PageName.SIMPLE_DIALOG: (context) => SimpleDialogPage(),
+        PageName.ALERT_DIALOG: (context) => AlertDialogPage(),
+        PageName.EXPANSION_PANEL: (context) => ExpansionPage(),
+        PageName.SNACK_BAR: (context) => SnackPage(),
+        PageName.TEXT_FIELD: (context) => TextFieldPage(),
+        PageName.CHIP: (context) => ChipPage(),
+        PageName.SLIDER: (context) => SliderPage(),
+        PageName.CHECK_BOX: (context) => CheckBoxPage(),
+        PageName.CARD: (context) => CardPage(),
+        PageName.TOOLTIP: (context) => TooltipPage(),
+        PageName.DATA_TABLE: (context) => DataTablePage(),
+        PageName.PROGRESS_INDICATOR: (context) => ProgressIndicatorPage(),
+        PageName.MIX_SINGLE_LAYOUT: (context) => MixPage(),
+        PageName.INDEX_STACK: (context) => IndexStackPage(),
+        PageName.EXPANDED: (context) => ExpandPage(),
+        PageName.FLOW: (context) => FlowPage(),
+        PageName.LAYOUT: (context) => LayoutPage(),
+        PageName.METHOD_CHANNEL: (context) => MethodChannelPage(),
+        PageName.ASSET_PAGE: (context) => AssetsPage(),
+        PageName.ANIMATION: (context) => AnimationPage(),
+        PageName.ANIM_CONTAINER: (context) => AnimatedContainerPage(),
+        PageName.ANIM_CROSS_FADE: (context) => AnimCrossFadePage(),
+        PageName.ANIM_HERO: (context) => HeroPage(),
+        PageName.ANIM_FADE_TRANS: (context) => FadeTransitionPage(),
+        PageName.ANIM_POSITION_TRANS: (context) => PositionTransitionPage(),
+        PageName.ANIM_ROTATION: (context) => RotationPage(),
+        PageName.ANIM_DEFAULT_TEXT: (context) => DefaultTextPage(),
+        PageName.ANIM_LIST: (context) => AnimListPage(),
+        PageName.ANIM_MODAL_BARRIER: (context) => AnimatedModalPage(),
+        PageName.ANIM_SIZE: (context) => AnimSizePage(),
+        PageName.ANIM_WIDGET: (context) => AnimWidgetPage(),
+        PageName.ANIM_PYH_MODEL: (context) => PyhModelPage(),
+        PageName.ANIM_OPACITY: (context) => AnimOpacityPage(),
+        PageName.INTER_DRAG: (context) => DraggablePage(),
+        PageName.INTER_GESTURE: (context) => GesturePage(),
+        PageName.INTER_DISMISSIBLE: (context) => DismissiblePage(),
+        PageName.INTER_POINTER: (context) => PointerPage(),
+        PageName.INTER_NAV: (context) => NavigatorPage(),
+        PageName.ASYNC_FUTURE: (context) => FuturePage(),
+        PageName.ASYNC_STREAM_BUILDER: (context) => StreamBuilderPage(),
+        PageName.PAINT_OPACITY: (context) => PaintingPage(),
+      },
     );
   }
 }
