@@ -30,6 +30,14 @@ class _HomePage extends State<HomeScreen> {
             title: Text("Assets"),
             onTap: () => Navigator.pushNamed(context, "/assets"),
           ),
+          ListTile(
+            title: Text("Async_Future"),
+            onTap: () => Navigator.pushNamed(context, "/async_future"),
+          ),
+          ListTile(
+            title: Text("Async_Stream"),
+            onTap: () => Navigator.pushNamed(context, "/async_stream"),
+          ),
         ],
       ),
     );
