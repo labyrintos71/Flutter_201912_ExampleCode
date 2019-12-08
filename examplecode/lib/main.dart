@@ -1,5 +1,6 @@
 import 'package:examplecode/page/assets/AssetsPage.dart';
 import 'package:examplecode/page/main_page.dart';
+
 ///Create by Flutter open
 import 'package:flutter/material.dart';
 import 'package:examplecode/page/_page.dart';
@@ -22,8 +23,7 @@ class ExamplApp extends StatelessWidget {
         "/assets": (context) => AssetsPage(),
         "/async_future": (context) => FuturePage(),
         "/async_stream": (context) => StreamBuilderPage(),
-        
-        PageName.ANIM_CONTAINER: (context) => AnimatedContainerPage(),
+        "/anim_container": (context) => AnimatedContainerPage(),
         PageName.ANIM_CROSS_FADE: (context) => AnimCrossFadePage(),
         PageName.ANIM_HERO: (context) => HeroPage(),
         PageName.ANIM_FADE_TRANS: (context) => FadeTransitionPage(),
@@ -37,9 +37,11 @@ class ExamplApp extends StatelessWidget {
         PageName.ANIM_PYH_MODEL: (context) => PyhModelPage(),
         PageName.ANIM_OPACITY: (context) => AnimOpacityPage(),
 
-
-
-        PageName.CONTAINER: (context) => ContainerPage(),
+        "/chip": (context) => ChipPage(),
+        "/card": (context) => CardPage(),
+        "/checkbox": (context) => CheckBoxPage(),
+        "/container": (context) => ContainerPage(),
+        
         PageName.TEXT: (context) => TextPage(),
         PageName.IMAGE: (context) => ImagePage(),
         PageName.ROW_COLUMN: (context) => RowColumnPage(),
@@ -50,7 +52,8 @@ class ExamplApp extends StatelessWidget {
         PageName.PLACE_HOLDER: (context) => PlaceHolderPage(),
         PageName.BOTTOM_NAV_BAR: (context) => BottomNavBarPage(),
         PageName.TAB_VIEW: (context) => TabBarViewPage(),
-        PageName.FLOATING_ACTION_BUTTON: (context) => FloatingActionButtonPage(),
+        PageName.FLOATING_ACTION_BUTTON: (context) =>
+            FloatingActionButtonPage(),
         PageName.DROP_DOWN_BUTTON: (context) => DropDownButtonPage(),
         PageName.POPUP_MENU_BUTTON: (context) => PopupMenuButtonPage(),
         PageName.STACK: (context) => StackPage(),
@@ -59,10 +62,7 @@ class ExamplApp extends StatelessWidget {
         PageName.EXPANSION_PANEL: (context) => ExpansionPage(),
         PageName.SNACK_BAR: (context) => SnackPage(),
         PageName.TEXT_FIELD: (context) => TextFieldPage(),
-        PageName.CHIP: (context) => ChipPage(),
         PageName.SLIDER: (context) => SliderPage(),
-        PageName.CHECK_BOX: (context) => CheckBoxPage(),
-        PageName.CARD: (context) => CardPage(),
         PageName.TOOLTIP: (context) => TooltipPage(),
         PageName.DATA_TABLE: (context) => DataTablePage(),
         PageName.PROGRESS_INDICATOR: (context) => ProgressIndicatorPage(),

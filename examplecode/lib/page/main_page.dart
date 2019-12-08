@@ -38,6 +38,23 @@ class _HomePage extends State<HomeScreen> {
             title: Text("Async_Stream"),
             onTap: () => Navigator.pushNamed(context, "/async_stream"),
           ),
+          ListTile(
+            title: Text("Card"),
+            onTap: () => Navigator.pushNamed(context, "/card"),
+          ),
+          ListTile(
+            title: Text("Checkbox"),
+            onTap: () => Navigator.pushNamed(context, "/checkbox"),
+          ),
+          ListTile(
+            title: Text("Chip"),
+            onTap: () => Navigator.pushNamed(context, "/chip"),
+          ),
+          ListTile(
+            title: Text("Container"),
+            onTap: () => Navigator.pushNamed(context, "/container"),
+          ),
+          
         ],
       ),
     );
